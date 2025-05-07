@@ -102,8 +102,8 @@ function pm(eventObject) {
 
       case "click_product_list":
         eventObjectLocal.type = "click_product_list";
-        eventObjectLocal.list = eventObject.list;
-        eventObjectLocal.index = eventObject.index;
+        eventObjectLocal.item_list = eventObject.item_list;
+
         eventObjectLocal.items = BANNER_DATA_MANAGER.assignBannersToItems(
           eventObject.items
         );
@@ -114,8 +114,7 @@ function pm(eventObject) {
 
       case "view_product_list":
         eventObjectLocal.type = "view_product_list";
-        eventObjectLocal.list = eventObject.list;
-        eventObjectLocal.index = eventObject.index;
+        eventObjectLocal.item_list = eventObject.item_list;
 
         BANNER_DATA_MANAGER.saveViewedItem(
           eventObject.items,
