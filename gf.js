@@ -25,7 +25,7 @@ function gf(eventObjectLocal) {
 
     //Filtra eventos de banners que venham de banners de produtos concorrentes
     if (eventObjectLocal.type == "view_banner" || eventObjectLocal.type == "click_banner") {
-        const bannerData = eventObjectLocal?.items?.[0]?.banners?.[0];
+        const bannerData = eventObjectLocal?.bannerData;
 
         if (!bannerData || !bannerData.creative_name.match(OPELLA_REGEX)) {
             return;
